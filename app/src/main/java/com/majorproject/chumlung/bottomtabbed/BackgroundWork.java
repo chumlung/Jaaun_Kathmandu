@@ -3,6 +3,7 @@ package com.majorproject.chumlung.bottomtabbed;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ListAdapter;
@@ -47,7 +48,8 @@ public class BackgroundWork extends AsyncTask<String,Void,String> {
 
         this.listener = listener;
     }
-
+    
+    //logging in through php using url 
     @Override
     protected String doInBackground(String... params) {
         String type = params[2];
