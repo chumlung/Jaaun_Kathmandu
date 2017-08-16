@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/trial"
+    tools:context="com.majorproject.chumlung.bottomtabbed.Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Log In"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="376dp"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <EditText
+            android:id="@+id/ipadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="IP Address"
+            android:inputType="textPersonName"
+            android:maxHeight="50dp"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:minHeight="50dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#a9a9a9"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="208dp"
+            android:layout_above="@+id/login"
+            android:layout_centerHorizontal="true"
+            />
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxHeight="50dp"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:minHeight="51dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#a9a9a9"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="289dp"
+            android:layout_above="@+id/ipadd"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:maxHeight="50dp"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:minHeight="50dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#a9a9a9"
+            android:textSize="25sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="208dp"
+            android:layout_above="@+id/Password"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

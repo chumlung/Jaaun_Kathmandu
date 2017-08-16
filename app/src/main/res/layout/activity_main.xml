@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.majorproject.chumlung.bottomtabbed.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/pattern_bg">
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/background_light"
+            android:text="20sp"
+            android:id="@+id/oops"
+            android:layout_below="@+id/welcome"
+            android:visibility="invisible"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/userimage"
+            android:visibility="visible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/biolabel"
+            android:layout_below="@+id/userimage"
+            android:layout_marginTop="15dp"
+            android:text="Bio: "
+            android:textStyle="bold"
+            android:textColor="@android:color/background_light"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/userbio"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/biolabel"
+
+            android:textColor="@android:color/background_light"
+            android:textSize="15sp"
+            android:visibility="visible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posts"
+            android:layout_marginTop="15dp"
+            android:id="@+id/postlabel"
+            android:layout_below="@+id/userbio"
+            android:textColor="@android:color/background_light"
+            />
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userpost"
+            android:layout_below="@+id/postlabel"
+            android:visibility="visible"
+        />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bloglistview"
+            android:layout_below="@+id/welcome"
+            android:dividerHeight="20sp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:visibility="invisible"
+            />
+
+
+        <ListView
+            android:id="@+id/hotel_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/welcome"
+            android:dividerHeight="10sp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/rest_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/welcome"
+            android:dividerHeight="10sp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:visibility="invisible" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutbtn"
+            android:text="Log Out"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/background_light"
+            android:layout_alignParentBottom="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation" />
+
+</LinearLayout>
