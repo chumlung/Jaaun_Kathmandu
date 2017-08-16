@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter {
 
-        // Declare Variables
         Context context;
         LayoutInflater inflater;
         ArrayList<HashMap<String, String>> data;
@@ -62,14 +61,13 @@ public class ListViewAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             View itemView = inflater.inflate(R.layout.list_item, parent, false);
-            // Get the position
+
             resultp = data.get(position);
-// Locate the TextViews in listview_item.xml
+
             name =  itemView.findViewById(R.id.list_name);
-// Locate the ImageView in listview_item.xml
+
             image =  itemView.findViewById(R.id.list_image);
 
-            // Capture position and set results to the TextViews
             String image_src;
             String imageuri="";
 
@@ -83,11 +81,11 @@ public class ListViewAdapter extends BaseAdapter {
 
             Picasso.with(context).load(imageuri).placeholder(R.drawable.temp_img).resize(450,300).into(image);
 
-            // Capture ListView item click
+
            itemView.setOnClickListener(new OnClickListener() {
                @Override
                 public void onClick(View arg0) {
-                    // Get the position
+
                     resultp = data.get(position);
                     Intent intent = new Intent(context, SingleItemView.class);
 
