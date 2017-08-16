@@ -46,7 +46,7 @@ public class ListViewAdapterRests extends BaseAdapter {
     }
 
     public View getView(final int position, View convertView, ViewGroup parent) {
-        // Declare Variables
+
         TextView name;
         ImageView image;
 
@@ -76,7 +76,7 @@ public class ListViewAdapterRests extends BaseAdapter {
 
         Picasso.with(context).load(imageuri).placeholder(R.drawable.temp_img).resize(450,300).into(image);
 
-        // Capture ListView item click
+
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
