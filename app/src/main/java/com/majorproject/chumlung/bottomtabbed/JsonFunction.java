@@ -18,7 +18,7 @@ import static com.majorproject.chumlung.bottomtabbed.AppConstants.hListJson;
 import static com.majorproject.chumlung.bottomtabbed.AppConstants.restListJson;
 import static com.majorproject.chumlung.bottomtabbed.AppConstants.userPostList;
 
-/**
+g/**
  * Created by Chumlung on 8/10/2017.
  */
 
@@ -39,7 +39,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
         progressDialog.setMessage("Getting Recommendations...");
         progressDialog.setCancelable(false);
         progressDialog.show();
-        // Showing progress dialo
+        // Showing progress dialog
 
     }
 
@@ -73,7 +73,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                 JSONArray hotels = jsonObj.getJSONArray("hotel");
 
 
-                // looping through All Contacts
+                // looping through hotel elements
                 for (int i = 0; i < hotels.length(); i++) {
                     JSONObject c = hotels.getJSONObject(i);
 
@@ -83,7 +83,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     String hotel_location = c.getString("hotel_location");
                     String hotel_rating = c.getString("rating");
 
-                    // tmp hash map for single contact
+                    // tmp hash map for single hotel details
                     HashMap<String, String> hotelsmap = new HashMap<>();
 
                     // adding each child node to HashMap key => value
@@ -93,7 +93,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     hotelsmap.put("hotel_location", hotel_location);
                     hotelsmap.put("hotel_rating", hotel_rating);
 
-                    // adding notice to notice list
+                    // adding hotels to hotel list
                     hListJson.add(hotelsmap);
                 }
 
@@ -112,7 +112,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
 
                 JSONObject resJson = new JSONObject(jsonRestStr);
                 JSONArray restaurants = resJson.getJSONArray("restaurant");
-                // looping through All Contacts
+                // looping through All restaurants
 
                 for (int i = 0; i < restaurants.length(); i++) {
                     JSONObject c = restaurants.getJSONObject(i);
@@ -123,7 +123,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     String restaurant_location = c.getString("restaurant_location");
                     String rating = c.getString("rating");
 
-                    // tmp hash map for single contact
+                    // tmp hash map for single restaurant
                     HashMap<String, String> restsmap = new HashMap<>();
 
                     // adding each child node to HashMap key => value
@@ -133,7 +133,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     restsmap.put("restaurant_location", restaurant_location);
                     restsmap.put("rating", rating);
 
-                    // adding notice to notice list
+                    // adding restaurant to restaurant list
                     restListJson.add(restsmap);
                 }
             } catch (final JSONException e) {
@@ -152,7 +152,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                 // Getting JSON Array node
                 JSONArray blogs = jsonBlogObj.getJSONArray("blogs");
 
-                // looping through All Contacts
+                // looping through All Blogs
                 for (int i = 0; i < blogs.length(); i++) {
                     JSONObject c = blogs.getJSONObject(i);
 
@@ -164,7 +164,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     String category = c.getString("category");
                     String blog_id = c.getString("blog_id");
 
-                    // tmp hash map for single contact
+                    // tmp hash map for single blog
                     HashMap<String, String> blogsmap = new HashMap<>();
 
                     // adding each child node to HashMap key => value
@@ -176,7 +176,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     blogsmap.put("created_date", created_date);
                     blogsmap.put("blog_id",blog_id);
 
-                    // adding notice to notice list
+                    // adding blog to bloglist
                     blogListJson.add(blogsmap);
                 }
 
@@ -196,7 +196,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                 JSONArray users = jsonuserObj.getJSONArray("user");
 
 
-                // looping through All Contacts
+                // looping through All users
                 for (int i = 0; i < users.length(); i++) {
                     JSONObject c = users.getJSONObject(i);
 
@@ -206,7 +206,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     String post = c.getString("post");
                     String created_date = c.getString("created_date");
 
-                    // tmp hash map for single contact
+                    // tmp hash map for single user
                     HashMap<String, String> usersmap = new HashMap<>();
 
                     // adding each child node to HashMap key => value
@@ -216,7 +216,7 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
                     usersmap.put("post", post);
                     usersmap.put("created_date", created_date);
 
-                    // adding notice to notice list
+                    // adding users to userpostlist
                     userPostList.add(usersmap);
                 }
 
@@ -245,14 +245,6 @@ public class JsonFunction extends  AsyncTask<String, Void, String > {
         }
         // Dismiss the progress dialog
 
-
-
-
-
-
-        /**
-         * Updating parsed JSON data into ListView
-         * **/
 
     }
 
