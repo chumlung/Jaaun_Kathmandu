@@ -54,11 +54,11 @@ public class BlogViewAdapter extends BaseAdapter {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View itemView = inflater.inflate(R.layout.list_blog, parent, false);
-        // Get the position
+
         resultp = data.get(position);
-// Locate the TextViews in listview_item.xml
+
         name =  itemView.findViewById(R.id.blog_title);
-// Locate the ImageView in listview_item.xml
+
         date =  itemView.findViewById(R.id.blog_date);
 
 
@@ -69,12 +69,10 @@ public class BlogViewAdapter extends BaseAdapter {
 
 
 
-
-        // Capture ListView item click
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                // Get the position
+
                 resultp = data.get(position);
                 Intent intent = new Intent(context, SingleBlog.class);
 
