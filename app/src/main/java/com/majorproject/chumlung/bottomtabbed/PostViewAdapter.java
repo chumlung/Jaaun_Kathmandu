@@ -45,7 +45,7 @@ public class PostViewAdapter extends BaseAdapter{
     }
 
     public View getView(final int position, View convertView, ViewGroup parent) {
-        // Declare Variables
+
         TextView name;
 
 
@@ -53,9 +53,9 @@ public class PostViewAdapter extends BaseAdapter{
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View itemView = inflater.inflate(R.layout.list_post, parent, false);
-        // Get the position
+
         resultp = data.get(position);
-// Locate the TextViews in listview_item.xml
+
         name =  itemView.findViewById(R.id.userposts);
 
 
@@ -64,7 +64,7 @@ public class PostViewAdapter extends BaseAdapter{
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {}
-           // Get the position
+
         });
 
 
